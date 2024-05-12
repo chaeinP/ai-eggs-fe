@@ -1,0 +1,70 @@
+@import "../../colors";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.41px;
+  color: $grey-800;
+}
+
+.header {
+  height: 61px;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: $grey-800;
+  }
+}
+
+.section {
+  display: flex;
+  gap: 24px;
+}
+
+.filters {
+  width: 236px;
+  padding: 0 8px;
+}
+
+.bootcamp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+}
+
+.filter-panel {
+  height: 32px;
+  padding: 3.5px 0;
+  display: flex;
+  gap: 8px;
+}
+
+.initialize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $grey-800;
+  width: 71px;
+  height: 32px;
+  background-color: $white;
+}

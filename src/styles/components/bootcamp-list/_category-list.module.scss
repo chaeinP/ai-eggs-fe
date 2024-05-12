@@ -1,0 +1,37 @@
+@import "../../colors";
+
+.category_list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.64px;
+  }
+
+  ul {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    li {
+      width: 254px;
+      height: 72px;
+      gap: 10px;
+      border: 1px solid $grey-100;
+      border-radius: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      p {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 20.29px;
+      }
+    }
+  }
+}

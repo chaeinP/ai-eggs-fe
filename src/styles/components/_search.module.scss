@@ -1,0 +1,39 @@
+@import "../colors";
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  height: 36px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: $light-grey-100;
+  padding: 8px 16px;
+
+  &:hover {
+    outline: 1px solid $red-300;
+  }
+  &:focus-within {
+    outline: 1px solid $red-300;
+    box-shadow: 0px 0px 0px 4px rgba(255, 229, 231, 0.25);
+  }
+}
+
+.input {
+  background-color: $light-grey-100;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+
+  &::placeholder {
+    color: $grey-400;
+  }
+}
+
+.button {
+  background-color: $light-grey-100;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  cursor: pointer;
+}

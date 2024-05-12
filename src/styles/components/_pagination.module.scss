@@ -1,0 +1,43 @@
+@import "../colors";
+
+@mixin button {
+  width: 30px;
+  height: 30px;
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  gap: 6px;
+  margin: 16px auto 0;
+}
+
+.default {
+  @include button;
+  border: 1px solid $grey-100;
+  color: $grey-800;
+  background-color: $white;
+}
+
+.selected {
+  @include button;
+  color: $white;
+  background-color: $grey-900;
+}
+
+.arrow_disabled {
+  @include button;
+  border: 1px solid $grey-100;
+  color: $grey-800;
+  background-color: $white;
+  opacity: 30%;
+  cursor: not-allowed;
+}

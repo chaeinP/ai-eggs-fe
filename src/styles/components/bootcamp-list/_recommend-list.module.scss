@@ -1,0 +1,19 @@
+@import "../../colors";
+
+.recommend_list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.64px;
+  }
+
+  ul {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+}

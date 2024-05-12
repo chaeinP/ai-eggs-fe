@@ -1,0 +1,21 @@
+@import "../colors";
+
+.dropdown {
+  height: 36px;
+  background-color: $white;
+  display: flex;
+  gap: 3.5px;
+  border-radius: 7px;
+  outline: 1px solid $grey-100;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px 6px 16px;
+  cursor: pointer;
+
+  p {
+    font-weight: 500;
+    color: $grey-800;
+    font-size: 14px;
+    line-height: 16.71px;
+  }
+}

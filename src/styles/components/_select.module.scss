@@ -1,0 +1,43 @@
+@import "../colors";
+
+.select-wrapper {
+  width: 220px;
+  border-bottom: 1px solid $grey-100;
+  padding-bottom: 12px;
+}
+
+.filter-name {
+  height: 53px;
+  padding: 16px 0px;
+  margin: auto 0;
+
+  p {
+    font-weight: 600;
+    color: $grey-800;
+    font-size: 18px;
+  }
+}
+
+.single-select-item {
+  height: 42px;
+  padding: 12px 0px;
+  font-size: 15px;
+  color: $grey-800;
+  font-weight: 400;
+  cursor: pointer;
+  strong {
+    font-weight: 600;
+  }
+}
+
+.multiple-select-item {
+  height: 42px;
+  padding: 12px 0px;
+  font-size: 15px;
+  color: $grey-800;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}

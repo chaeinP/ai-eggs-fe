@@ -1,0 +1,36 @@
+@import "../../colors";
+
+.card {
+  width: 251px;
+
+  ul {
+    display: flex;
+    gap: 6px;
+  }
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 25.5px;
+  color: $grey-800;
+}
+
+.company {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22.5px;
+  color: $grey-600;
+}
+
+.price {
+  display: flex;
+  gap: 8px;
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: $grey-800;
+  }
+}

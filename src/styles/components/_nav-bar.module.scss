@@ -1,0 +1,27 @@
+@import "../colors";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+
+    li {
+      width: 130px;
+      height: 34px;
+      padding: 8px 0px;
+      text-align: center;
+      a {
+        font-size: 15px;
+        text-decoration: none;
+        color: $grey-800;
+        font-weight: 400;
+      }
+    }
+  }
+}
