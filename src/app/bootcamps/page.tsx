@@ -5,6 +5,7 @@ import BootcampList from "@src/components/bootcamp-list/BootcampList";
 import { decodeSearchParams } from "@src/common/utils/decodeSearchParams";
 import { fetchBootcamps } from "@src/api/fetchBootcamps";
 import { fetchRecommendedBootcamps } from "@src/api/fetchRecommendedBootcamps";
+import HorizontalDivider from "@src/components/divider/HorizontalDivider";
 
 export default async function Bootcamps({ searchParams }: { searchParams: { [key: string]: string | undefined } }) {
   const filters = await fetchBootcampFilters();
@@ -14,6 +15,7 @@ export default async function Bootcamps({ searchParams }: { searchParams: { [key
 
   return (
     <div className={styles.main}>
+      <HorizontalDivider height="0px" />
       <h1 className={styles.title}>데이터 · AI 부트캠프</h1>
       {recommendedBootcampList.totalCount > 0 && (
         <BootcampRecommendList bootcamps={recommendedBootcampList.bootcamps} />

@@ -1,6 +1,6 @@
-import { Bootcamp } from "./bootcamp.interface";
+import { SimpleBootcamp } from "./simpleBootcamp.interface";
 
 export interface BootcampList {
-  bootcamps: Bootcamp[];
+  bootcamps: SimpleBootcamp[];
   totalCount: number;
 }

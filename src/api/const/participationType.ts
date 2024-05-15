@@ -4,3 +4,8 @@ export const ParticipationType = {
 } as const;
 
 export type ParticipationType = (typeof ParticipationType)[keyof typeof ParticipationType];
+
+export interface ParticipationTypeLabel {
+  _id: ParticipationType;
+  label: string;
+}

@@ -5,3 +5,8 @@ export const ApplicationStatus = {
 } as const;
 
 export type ApplicationStatus = (typeof ApplicationStatus)[keyof typeof ApplicationStatus];
+
+export interface ApplicationStatusLabel {
+  _id: ApplicationStatus;
+  label: string;
+}

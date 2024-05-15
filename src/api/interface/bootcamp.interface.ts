@@ -1,38 +1,25 @@
-import { ApplicationStatus } from "../const/applicationStatus";
-import { ParticipationMethod } from "../const/participationMethod";
-import { ParticipationType } from "../const/participationType";
-import { PricingType } from "../const/pricingType";
-import { FilterItem } from "./filter.interface";
+import { BootcampCurriculum } from "./bootcampCurriculum";
+import { BootcampInstructor } from "./bootcmpaInstructor.interface";
+import { SimpleBootcamp } from "./simpleBootcamp.interface";
 
-export interface Bootcamp {
-  id: string;
-  thumbnailUrl: string;
-  title: string;
-  nthClass?: number;
-  educationCompany: { id: string; name: string; siteUrl: string; logoUrl: string };
-  categories: FilterItem[];
-  tags: FilterItem[];
-  skills: FilterItem[];
-  description: string;
-  courseStartDate: string;
-  courseEndDate: string;
-  applicationStartDate: string | null;
-  applicationEndDate: string | null;
-  applicationLeftDays: number;
-  applicationStatus: { _id: ApplicationStatus; label: string };
-  schedule: string | null;
-  originalPrice: number;
-  pricingType: {
-    _id: PricingType;
-    label: string;
-  };
-  participationMethod: {
-    _id: ParticipationMethod;
-    label: string;
-  };
-  participationType: {
-    _id: ParticipationType;
-    label: string;
-  };
-  isKdt: boolean;
+export interface Bootcamp extends SimpleBootcamp {
+  bootcampUUID: string;
+  isSelectionProcess: boolean;
+  pageUrl: string;
+  totalTrainingMonth: number;
+  totalTrainingHours: number | null;
+  instructors: BootcampInstructor[];
+  curriculum: BootcampCurriculum[];
+  learningGoals: string;
+  features: string;
+  recommendedTargets: string;
+  careerSupport: string | null;
+  admissionsProcess: string | null;
+  qualifications: string | null;
+  projects: string | null;
+  address: string | null;
+  city: string | null;
+  locationImageUrls: string[];
+  quota: number | null;
+  selectionCriteria: string | null;
 }

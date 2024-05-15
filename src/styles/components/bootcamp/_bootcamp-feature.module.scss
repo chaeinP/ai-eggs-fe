@@ -1,0 +1,8 @@
+@import "../../colors";
+
+.box {
+  background: $light-grey-100;
+  border: 1px solid $grey-100;
+  padding: 24px;
+  border-radius: 5px;
+}

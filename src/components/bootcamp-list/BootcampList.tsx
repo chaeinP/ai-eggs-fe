@@ -18,7 +18,7 @@ import Pagination from "@src/components/pagination/Pagination";
 import { useSearchBar } from "@src/components/search-bar/useSearchBar";
 import { BootcampSort } from "@src/common/const/bootcampSort";
 import { useDropdown } from "@src/components/dropdown/useDropdown";
-import { Bootcamp } from "@src/api/interface/bootcamp.interface";
+import { SimpleBootcamp } from "@src/api/interface/simpleBootcamp.interface";
 import BootcampFilter from "./BootcampFilter";
 import Tag from "../tag/Tag";
 import Close from "@public/icons/close.svg";
@@ -32,7 +32,7 @@ export default function BootcampList({
 }: {
   filters: Filter[];
   searchParams: { [key: string]: string[] | undefined };
-  bootcamps: Bootcamp[];
+  bootcamps: SimpleBootcamp[];
   totalCount: number;
 }) {
   const router = useRouter();

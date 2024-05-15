@@ -13,6 +13,7 @@
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
     "next": "14.2.3",
+    "next-mdx-remote": "^4.4.1",
     "react": "^18",
     "react-dom": "^18",
     "recoil": "^0.7.7"
