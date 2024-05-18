@@ -12,7 +12,7 @@ export default function BootcampTitleBanner({ bootcamp }: { bootcamp: Bootcamp }
             {bootcamp.title}
             {bootcamp.nthClass ? ` ${bootcamp.nthClass}기` : ""}
           </h1>
-          <p className={styles.edu_company}> {bootcamp.educationCompany.name}</p>
+          <p className={styles.edu_company}> {bootcamp.educationCompanies[0].name}</p>
         </div>
         <Image src={bootcamp.thumbnailUrl} alt={bootcamp.title} width={320} height={179.1} />
       </div>

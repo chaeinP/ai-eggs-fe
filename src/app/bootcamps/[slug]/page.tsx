@@ -3,6 +3,8 @@ import BootcampTitleBanner from "@src/components/bootcamp/BootcampTitleBanner";
 import CTASection from "@src/components/bootcamp/CTASction";
 import BootcampMainContent from "@src/components/bootcamp/mainContent/BootcampMainContent";
 import HorizontalDivider from "@src/components/divider/HorizontalDivider";
+import LoadingSpinner from "@src/components/spinner/LoadingSpinner";
+import { Suspense } from "react";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const bootcampId = params.slug.split("_")[1];
@@ -12,10 +14,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <div>
       <BootcampTitleBanner bootcamp={bootcamp} />
       <HorizontalDivider height="48px" />
-      <main style={{ display: "flex", gap: "40px" }}>
-        <BootcampMainContent bootcamp={bootcamp} />
-        <CTASection bootcamp={bootcamp} />
-      </main>
+      <Suspense fallback={<LoadingSpinner />}>
+        <main style={{ display: "flex", gap: "40px" }}>
+          <BootcampMainContent bootcamp={bootcamp} />
+          <CTASection bootcamp={bootcamp} />
+        </main>
+      </Suspense>
     </div>
   );
 }

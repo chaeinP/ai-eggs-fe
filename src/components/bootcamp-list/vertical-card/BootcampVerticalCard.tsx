@@ -40,7 +40,7 @@ export default function BootcampVerticalCard({ bootcamp }: { bootcamp: SimpleBoo
             {bootcamp.title}
             {bootcamp.nthClass ? ` ${bootcamp.nthClass}기` : ""}
           </p>
-          <p className={styles.company}>{bootcamp.educationCompany.name}</p>
+          <p className={styles.company}>{bootcamp.educationCompanies[0].name}</p>
           <HorizontalDivider height="12.5px" />
           <div className={styles.price}>
             <p>{bootcamp.pricingType._id === "free" ? "무료" : bootcamp.originalPrice + "원"}</p>

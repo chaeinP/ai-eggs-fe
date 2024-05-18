@@ -17,7 +17,7 @@ export default function BootcampHorizontalCard({ bootcamp }: { bootcamp: SimpleB
             {bootcamp.title}
             {bootcamp.nthClass ? ` ${bootcamp.nthClass}기` : ""}
           </h3>
-          <p className={styles.company}>{bootcamp.educationCompany.name}</p>
+          <p className={styles.company}>{bootcamp.educationCompanies[0].name}</p>
           <p className={styles.description}>
             수강 기간: {bootcamp.courseStartDate.slice(0, 10)} ~ {bootcamp.courseEndDate.slice(0, 10)}
           </p>

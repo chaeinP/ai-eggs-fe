@@ -1,10 +1,25 @@
 @import "../../colors";
 
 .main {
+  height: 100%;
+}
+
+@mixin card {
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: 340px;
+  background-color: $white;
+}
+
+.fixed {
+  position: fixed;
+  top: 48px;
+  @include card;
+}
+
+.non_fixed {
+  @include card;
 }
 
 .d_day {

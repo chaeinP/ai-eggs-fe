@@ -9,7 +9,7 @@ export default function BootcampCategoryList({
 }: { filter: Filter } & UseSingleSelect) {
   return (
     <div className={styles.category_list}>
-      <h2>{filter.filterName}</h2>
+      <h3>{filter.filterName}</h3>
       <ul>
         {filter.filterItems.map((item) => (
           <li key={item._id} onClick={() => setSelectedItem(item)}>

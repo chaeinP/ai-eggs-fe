@@ -1,0 +1,35 @@
+@import "../../colors";
+
+.info {
+  @import "./bootcamp-h2.module";
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  > li {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px 16px 24px;
+    gap: 12px;
+    border-radius: 5px;
+    border: 1px solid $grey-100;
+    background-color: $white;
+
+    @import "../../markdown";
+  }
+}
+
+.name {
+  display: flex;
+  gap: 8px;
+
+  > p {
+    color: $grey-800;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25.2px;
+  }
+}

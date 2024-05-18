@@ -5,6 +5,9 @@ import BootcampFeatures from "./BootcampFeature";
 import Line from "@src/components/line/Line";
 import BootcampCourseInfo from "./BootcampCourseInfo";
 import BootcampApplicationInfo from "./BootcampApplicationInfo";
+import BootcampEducationCompany from "./BootcampEducationCompany";
+import BootcampInstructors from "./BootcampInstructors";
+import BootcampCurriculum from "./BootcampCurriculum";
 
 export default function BootcampMainContent({ bootcamp }: { bootcamp: Bootcamp }) {
   return (
@@ -14,10 +17,13 @@ export default function BootcampMainContent({ bootcamp }: { bootcamp: Bootcamp }
       </BootcampFeatures>
       <MarkdownSection title="학습 목표" markdownContent={bootcamp.learningGoals} />
       <MarkdownSection title="추천 대상" markdownContent={bootcamp.recommendedTargets} />
+      {bootcamp.curriculum?.length > 0 && <BootcampCurriculum bootcamp={bootcamp} />}
       {bootcamp.projects && <MarkdownSection title="프로젝트" markdownContent={bootcamp.projects} />}
       {bootcamp.careerSupport && <MarkdownSection title="취업 지원" markdownContent={bootcamp.careerSupport} />}
       <Line height="1px" />
       <BootcampCourseInfo bootcamp={bootcamp} />
+      {bootcamp.instructors.length > 0 && <BootcampInstructors bootcamp={bootcamp} />}
+      <BootcampEducationCompany bootcamp={bootcamp} />
       <Line height="1px" />
       <BootcampApplicationInfo bootcamp={bootcamp} />
       {bootcamp.admissionsProcess && (

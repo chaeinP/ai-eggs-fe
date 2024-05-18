@@ -2,7 +2,7 @@ import { ApplicationStatusLabel } from "../const/applicationStatus";
 import { ParticipationMethodLabel } from "../const/participationMethod";
 import { ParticipationTypeLabel } from "../const/participationType";
 import { PricingTypeLabel } from "../const/pricingType";
-import { EducatioinCompany } from "./educationCompany.interface";
+import { EducationCompany } from "./educationCompany.interface";
 import { FilterItem } from "./filter.interface";
 
 export interface SimpleBootcamp {
@@ -10,7 +10,7 @@ export interface SimpleBootcamp {
   thumbnailUrl: string;
   title: string;
   nthClass: number | null;
-  educationCompany: EducatioinCompany;
+  educationCompanies: EducationCompany[];
   categories: FilterItem[];
   tags: FilterItem[];
   skills: FilterItem[];

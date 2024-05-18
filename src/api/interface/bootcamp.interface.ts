@@ -10,6 +10,7 @@ export interface Bootcamp extends SimpleBootcamp {
   totalTrainingHours: number | null;
   instructors: BootcampInstructor[];
   curriculum: BootcampCurriculum[];
+  curriculumLink: string | null;
   learningGoals: string;
   features: string;
   recommendedTargets: string;

@@ -13,11 +13,11 @@ export default function NavBar() {
       <ul>
         <li>
           <Link href="/bootcamps?applicationStatus=모집 중" prefetch>
-            부트캠프 찾기
+            부트캠프
           </Link>
         </li>
         <li>
-          <Link href="/labs">연구실 찾기</Link>
+          <Link href="/labs">대학원 연구실</Link>
         </li>
       </ul>
     </nav>

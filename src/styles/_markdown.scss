@@ -1,0 +1,35 @@
+@import "./colors";
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26.25px;
+  color: $grey-800;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 23.8px;
+  color: $grey-800;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+li {
+  padding: 4px 6px;
+  margin-left: 25px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  color: $grey-800;
+}
+
+p {
+  strong {
+    font-weight: 600;
+  }
+}

@@ -32,11 +32,6 @@ ul {
   list-style: none;
 }
 
-li {
-  list-style-type: none;
-  list-style: none;
-}
-
 div::-webkit-scrollbar {
   display: none;
 }

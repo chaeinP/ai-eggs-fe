@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
 
-  h1 {
+  h3 {
     font-size: 24px;
     font-weight: 600;
     color: $grey-800;
@@ -37,6 +37,7 @@
 }
 
 .filter-panel {
+  list-style-type: none;
   height: 32px;
   padding: 3.5px 0;
   display: flex;
