@@ -11,7 +11,7 @@ import { UseMultiSelect } from "@src/components/select/hooks/useMultiSelect";
 import { UseSingleSelect } from "@src/components/select/hooks/useSingleSelect";
 import BootcampCategoryList from "./BootcampCategoryList";
 import HorizontalDivider from "@src/components/divider/HorizontalDivider";
-import { useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { usePagination } from "@src/components/pagination/usePagination";
 import Pagination from "@src/components/pagination/Pagination";
@@ -23,6 +23,7 @@ import BootcampFilter from "./BootcampFilter";
 import Tag from "../tag/Tag";
 import Close from "@public/icons/close.svg";
 import resetUseSelect from "../select/hooks/resetUseSelect";
+import LoadingSpinner from "../spinner/LoadingSpinner";
 
 export default function BootcampList({
   filters,
@@ -40,6 +41,8 @@ export default function BootcampList({
   const paginationHook = usePagination({ total: totalCount });
   const searchBarHook = useSearchBar({ keyword: searchParams.keyword?.[0] });
   const dropdownHook = useDropdown({ options: Object.keys(BootcampSort), defaultOption: Object.keys(BootcampSort)[0] });
+
+  const [loading, setLoading] = useState(false);
 
   useEffect(
     () => {
@@ -63,6 +66,7 @@ export default function BootcampList({
         path += `sortField=${bootcampSort.sortField}&orderBy=${bootcampSort.orderBy}&`;
       }
 
+      setLoading(true);
       router.push(path);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -98,8 +102,13 @@ export default function BootcampList({
       return acc;
     }, [] as [FilterItem, () => void][]);
 
+  useEffect(() => {
+    setLoading(false);
+  }, [bootcamps]);
+
   return (
     <div>
+      {loading && <LoadingSpinner />}
       <BootcampCategoryList filter={filters[0]} {...(selectHooks[0] as UseSingleSelect)} />
       <HorizontalDivider height="48px" />
       <header className={styles.header}>
