@@ -11,7 +11,7 @@ import styles from "@src/styles/components/bootcamp/_bootcamp-cta-section.module
 import Tag from "../tag/Tag";
 import { useEffect, useState } from "react";
 
-export default function CTASection({ bootcamp }: { bootcamp: Bootcamp }) {
+export default function BootcampCTASection({ bootcamp }: { bootcamp: Bootcamp }) {
   const showDday = bootcamp.applicationStatus._id === ApplicationStatus.OPEN && bootcamp.applicationEndDate;
   const isAddress = bootcamp.participationMethod.label === ParticipationMethod.OFFLINE && bootcamp.address;
   const isFree = bootcamp.pricingType._id === PricingType.FREE;

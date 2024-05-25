@@ -1,10 +1,9 @@
 "use client";
 
-import styles from "@src/styles/components/bootcamp-list/_bootcamp-list.module.scss";
+import styles from "@src/styles/components/laboratory-list/_laboratory-list.module.scss";
 import Replay from "@public/icons/replay.svg";
-import Dropdown from "@src/components/dropdown/Dropdown";
 import SearchBar from "@src/components/search-bar/SearchBar";
-import BootcampHorizontalCard from "./horizontal-card/BootcampHorizontalCard";
+import BootcampHorizontalCard from "./horizontal-card/LaboratoryHorizontalCard";
 import { Filter, FilterItem } from "@src/api/interface/filter.interface";
 import { initializeUseSelects } from "@src/components/select/hooks/initializeUseSelect";
 import { UseMultiSelect } from "@src/components/select/hooks/useMultiSelect";
@@ -15,32 +14,30 @@ import { useRouter } from "next/navigation";
 import { usePagination } from "@src/components/pagination/usePagination";
 import Pagination from "@src/components/pagination/Pagination";
 import { useSearchBar } from "@src/components/search-bar/useSearchBar";
-import { BootcampSort } from "@src/common/const/bootcampSort";
-import { useDropdown } from "@src/components/dropdown/useDropdown";
-import { SimpleBootcamp } from "@src/api/interface/simpleBootcamp.interface";
 import Tag from "../tag/Tag";
 import Close from "@public/icons/close.svg";
 import resetUseSelect from "../select/hooks/resetUseSelect";
 import LoadingSpinner from "../spinner/LoadingSpinner";
+import { SimpleLaboratory } from "@src/api/interface/simpleLaboratory.interface";
 import Filters from "../filters/Filters";
 import CategoryFilter from "../filters/CategoryFilter";
+import LaboratoryHorizontalCard from "./horizontal-card/LaboratoryHorizontalCard";
 
-export default function BootcampList({
+export default function LaboratoryList({
   filters,
   searchParams,
-  bootcamps,
+  laboratories,
   totalCount,
 }: {
   filters: Filter[];
   searchParams: { [key: string]: string[] | undefined };
-  bootcamps: SimpleBootcamp[];
+  laboratories: SimpleLaboratory[];
   totalCount: number;
 }) {
   const router = useRouter();
   const selectHooks = initializeUseSelects({ filters, searchParams });
   const paginationHook = usePagination({ total: totalCount });
   const searchBarHook = useSearchBar({ keyword: searchParams.keyword?.[0] });
-  const dropdownHook = useDropdown({ options: Object.keys(BootcampSort), defaultOption: Object.keys(BootcampSort)[0] });
 
   const [loading, setLoading] = useState(false);
 
@@ -56,15 +53,11 @@ export default function BootcampList({
           acc += `${hook.searchKey}=${Object.keys((hook as UseMultiSelect).selectedItems).join(",")}&`;
         }
         return acc;
-      }, "/bootcamps?");
+      }, "/laboratories?");
 
       path += `page=${paginationHook.currentPage}&size=10&`;
 
       if (searchBarHook.searchKeyword) path += `keyword=${searchBarHook.searchKeyword}&`;
-      if (dropdownHook.selectedOption) {
-        const bootcampSort = BootcampSort[dropdownHook.selectedOption as keyof typeof BootcampSort];
-        path += `sortField=${bootcampSort.sortField}&orderBy=${bootcampSort.orderBy}&`;
-      }
 
       setLoading(true);
       router.push(path);
@@ -74,13 +67,12 @@ export default function BootcampList({
       ...selectHooks.map((hook) => (hook as UseSingleSelect).selectedItem || (hook as UseMultiSelect).selectedItems),
       paginationHook.currentPage,
       searchBarHook.searchKeyword,
-      dropdownHook.selectedOption,
     ]
   );
 
   const handleReset = () => {
     resetUseSelect(selectHooks);
-    router.push("/bootcamps?page=1&size=10&sortField=applicationEndDate&orderBy=asc");
+    router.push("/laboratories");
   };
 
   const singleSelected = selectHooks
@@ -104,7 +96,7 @@ export default function BootcampList({
 
   useEffect(() => {
     setLoading(false);
-  }, [bootcamps]);
+  }, [laboratories]);
 
   return (
     <div>
@@ -113,15 +105,14 @@ export default function BootcampList({
       <HorizontalDivider height="48px" />
       <header className={styles.header}>
         <h3>모든 부트캠프</h3>
-        <SearchBar {...searchBarHook} placeholder="찾고 있는 부트캠프가 있나요?" />
+        <SearchBar {...searchBarHook} placeholder="찾고 있는 연구실이 있나요?" />
       </header>
       <section className={styles.section}>
         <Filters filters={filters} selectHooks={selectHooks} />
-        <div className={styles["bootcamp-list"]}>
-          <div className="bootcamp-list-header">
+        <div className={styles["laboratory-list"]}>
+          <div className="laboratory-list-header">
             <div className={styles.summary}>
               <p>{totalCount}개의 결과</p>
-              <Dropdown {...dropdownHook} />
             </div>
             <div className={styles["filter-panel"]}>
               <button className={styles.initialize} onClick={handleReset}>
@@ -152,8 +143,8 @@ export default function BootcampList({
           </div>
           <div>
             <ul className={styles.bootcamp_list_main}>
-              {bootcamps.map((bootcamp) => (
-                <BootcampHorizontalCard key={bootcamp.id} bootcamp={bootcamp} />
+              {laboratories.map((laboratory) => (
+                <LaboratoryHorizontalCard key={laboratory.id} laboratory={laboratory} />
               ))}
             </ul>
           </div>

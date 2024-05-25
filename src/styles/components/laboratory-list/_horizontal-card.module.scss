@@ -5,14 +5,12 @@
   gap: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid $grey-100;
-  width: 792px;
 }
 
 .main_info {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: 447px;
 }
 
 .extra_info {
@@ -20,7 +18,6 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
-  width: 53px;
 }
 
 .title {
@@ -53,7 +50,7 @@
 
 .tag_list {
   display: flex;
-  flex-wrap: wrap;
   margin-top: 4px;
+  width: 447px;
   gap: 6px;
 }

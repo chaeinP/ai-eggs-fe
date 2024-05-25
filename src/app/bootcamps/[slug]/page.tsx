@@ -1,6 +1,6 @@
 import { fetchBootcamp } from "@src/api/fetchBootcamp";
 import BootcampTitleBanner from "@src/components/bootcamp/BootcampTitleBanner";
-import CTASection from "@src/components/bootcamp/CTASction";
+import BootcampCTASection from "@src/components/bootcamp/BootcampCTASction";
 import BootcampMainContent from "@src/components/bootcamp/mainContent/BootcampMainContent";
 import HorizontalDivider from "@src/components/divider/HorizontalDivider";
 import LoadingSpinner from "@src/components/spinner/LoadingSpinner";
@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <Suspense fallback={<LoadingSpinner />}>
         <main style={{ display: "flex", gap: "40px" }}>
           <BootcampMainContent bootcamp={bootcamp} />
-          <CTASection bootcamp={bootcamp} />
+          <BootcampCTASection bootcamp={bootcamp} />
         </main>
       </Suspense>
     </div>

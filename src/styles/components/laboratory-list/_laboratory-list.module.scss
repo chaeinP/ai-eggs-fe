@@ -1,0 +1,66 @@
+@import "../../colors";
+
+.header {
+  height: 61px;
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: $grey-800;
+  }
+}
+
+.section {
+  display: flex;
+  gap: 24px;
+}
+
+.filters {
+  width: 236px;
+  padding: 0 8px;
+}
+
+.laboratory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+}
+
+.filter-panel {
+  list-style-type: none;
+  height: 32px;
+  padding: 3.5px 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.initialize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $grey-800;
+  width: 71px;
+  height: 32px;
+  background-color: $white;
+  cursor: pointer;
+}
+
+.laboratory-list_main {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}

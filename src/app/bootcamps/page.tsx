@@ -6,8 +6,6 @@ import { decodeSearchParams } from "@src/common/utils/decodeSearchParams";
 import { fetchBootcamps } from "@src/api/fetchBootcamps";
 import { fetchRecommendedBootcamps } from "@src/api/fetchRecommendedBootcamps";
 import HorizontalDivider from "@src/components/divider/HorizontalDivider";
-import { Suspense } from "react";
-import LoadingSpinner from "@src/components/spinner/LoadingSpinner";
 
 export default async function Bootcamps({ searchParams }: { searchParams: { [key: string]: string | undefined } }) {
   const filters = await fetchBootcampFilters();

@@ -1,12 +1,11 @@
 import { Filter } from "@src/api/interface/filter.interface";
-import styles from "@src/styles/components/bootcamp-list/_bootcamp-filter.module.scss";
+import styles from "@src/styles/components/filter/_filter.module.scss";
 import { UseMultiSelect } from "../select/hooks/useMultiSelect";
 import { UseSingleSelect } from "../select/hooks/useSingleSelect";
 import MultiSelect from "../select/MultiSelect";
 import SingleSelect from "../select/SingleSelect";
-import HorizontalDivider from "../divider/HorizontalDivider";
 
-export default function BootcampFilter({
+export default function Filters({
   filters,
   selectHooks,
 }: {

@@ -1,0 +1,99 @@
+@import "../../colors";
+
+.main {
+  height: 100%;
+}
+
+@mixin card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 340px;
+  background-color: $white;
+}
+
+.fixed {
+  position: fixed;
+  top: 48px;
+  @include card;
+}
+
+.non_fixed {
+  @include card;
+}
+
+.cta_card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 5px;
+  border: 1px solid $grey-100;
+
+  table {
+    text-align: left;
+    tr {
+      color: $grey-800;
+      &:last-child {
+        td {
+          padding-bottom: 0px;
+        }
+      }
+
+      td {
+        padding-bottom: 8px;
+      }
+
+      :nth-child(1) {
+        width: 100px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 19.6px;
+      }
+
+      :nth-child(2) {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+      }
+    }
+  }
+}
+
+.name {
+  display: flex;
+  gap: 8px;
+
+  p {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.25px;
+  }
+}
+
+.cta {
+  button {
+    width: 292px;
+    height: 49px;
+    padding: 8px 18px 8px 18px;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: $pink-600;
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 17.9px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.bottom {
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+  text-align: center;
+  color: $grey-600;
+  cursor: pointer;
+}

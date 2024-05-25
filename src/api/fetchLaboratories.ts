@@ -1,15 +1,15 @@
 import { env } from "@src/config/environment";
 import { Filter } from "./interface/filter.interface";
-import { BootcampList } from "./interface/bootcampList.interface";
+import { LaboratoryList } from "./interface/laboratoryList.interface";
 
-export const fetchBootcamps = async ({
+export const fetchLaboratories = async ({
   searchParams,
   filters,
 }: {
   searchParams: { [k: string]: string[] | undefined };
   filters: Filter[];
-}): Promise<BootcampList> => {
-  let url = `${env.baseUrl}/api/v1/bootcamps`;
+}): Promise<LaboratoryList> => {
+  let url = `${env.baseUrl}/api/v1/laboratories`;
 
   if (searchParams) {
     const keys = Object.keys(searchParams);
@@ -34,7 +34,7 @@ export const fetchBootcamps = async ({
   const response = await fetch(url, { cache: "no-cache" });
 
   if (!response.ok) {
-    throw new Error("fetchBootcamps failed");
+    throw new Error("fetchLaboratories failed");
   }
 
   return response.json();

@@ -17,7 +17,7 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
-          <Link href="/labs">대학원 연구실</Link>
+          <Link href="/laboratories">대학원 연구실</Link>
         </li>
       </ul>
     </nav>

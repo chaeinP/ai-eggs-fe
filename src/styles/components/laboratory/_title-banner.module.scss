@@ -1,0 +1,45 @@
+@import "../../colors";
+
+.title_banner {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  background-color: $grey-900;
+  height: 259.1px;
+  width: 100vw;
+  left: calc(-50vw + 50%);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1100px;
+  padding: 0 24px;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38.19px;
+    color: $white;
+    margin-bottom: 16px;
+  }
+}
+
+.category {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17.9px;
+  color: $white;
+  margin-bottom: 8px;
+}
+
+.edu_company {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.9px;
+  color: $grey-200;
+}
