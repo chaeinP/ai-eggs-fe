@@ -1,6 +1,7 @@
 @import "../../colors";
 
 .main {
+  @import "../../h2";
   display: flex;
   flex-direction: column;
   gap: 48px;

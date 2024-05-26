@@ -9,7 +9,7 @@ export default function BootcampApplicationInfo({ bootcamp }: { bootcamp: Bootca
 
   return (
     <section className={styles.info}>
-      <h2>수업 정보</h2>
+      <h2>모집 정보</h2>
       <table>
         <tbody>
           <tr>
