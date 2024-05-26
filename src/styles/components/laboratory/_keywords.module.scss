@@ -2,9 +2,10 @@
 
 .main {
   @import "../../h2";
+}
 
+.tags {
   display: flex;
-  flex-direction: column;
-  gap: 48px;
-  width: 672px;
+  gap: 8px;
+  flex-wrap: wrap;
 }

@@ -19,6 +19,7 @@ export interface SimpleFaculty {
 export interface SimpleCollege {
   id: string;
   name: string;
+  siteUrl: string;
 }
 
 export interface SimpleUniversity {

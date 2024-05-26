@@ -1,0 +1,31 @@
+@import "../../colors";
+
+.main {
+  @import "../../h2";
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.more {
+  margin-top: 8px;
+  button {
+    cursor: pointer;
+    width: (672px);
+    height: (40px);
+    padding: 8px 18px 8px 18px;
+    gap: 5px;
+    border-radius: 7px;
+    border: 1px solid $grey-100;
+    background-color: $white;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.71px;
+    text-align: center;
+    color: $pink-600;
+  }
+}

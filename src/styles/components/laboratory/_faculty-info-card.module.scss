@@ -1,0 +1,38 @@
+@import "../../colors";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 672px;
+  padding: 16px 24px 16px 24px;
+  border-radius: 10px;
+  border: 1px solid $grey-100;
+}
+
+.header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25.2px;
+    color: $grey-800;
+  }
+
+  margin-bottom: 8px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18.2px;
+    color: $grey-600;
+  }
+}

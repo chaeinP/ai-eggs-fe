@@ -1,0 +1,12 @@
+@import "../../colors";
+
+.main {
+  @import "../../markdown";
+
+  p {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 23.8px;
+    color: $grey-800;
+  }
+}

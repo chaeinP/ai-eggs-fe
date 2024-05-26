@@ -1,0 +1,35 @@
+@import "../../colors";
+
+@mixin card {
+  width: 672px;
+  height: 107px;
+  padding: 16px 24px 16px 24px;
+  gap: 4px;
+  border-radius: 10px;
+  border: 1px solid $grey-100;
+}
+
+.click_enabled {
+  cursor: pointer;
+  @include card;
+}
+
+.click_disabled {
+  @include card;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 23.8px;
+  color: $grey-800;
+  margin-bottom: 4px;
+}
+
+.sub_info {
+  display: flex;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  color: $grey-600;
+}
