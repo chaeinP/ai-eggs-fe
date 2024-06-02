@@ -1,0 +1,88 @@
+@import "../colors";
+
+.wrapper {
+}
+
+.banner {
+  width: 1052px;
+  cursor: pointer;
+  height: 223.88px;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.64px;
+    color: $white;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.09px;
+    color: $white;
+  }
+}
+
+.left {
+  width: 604px;
+  padding-top: 71.88px;
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.64px;
+    color: $white;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.09px;
+    color: $white;
+    margin-bottom: 23px;
+  }
+
+  button {
+    cursor: pointer;
+    padding: 9.5px 18px;
+    border-radius: 5px;
+  }
+}
+
+.banner_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px;
+
+  div {
+    width: 85px;
+    height: 28px;
+    padding: 6px 10px;
+    border-radius: 7px;
+    gap: 8px;
+    background: $grey-400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      width: 16px;
+      height: 16px;
+      background: none;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 13.13px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: $white;
+    }
+  }
+}
