@@ -6,6 +6,24 @@ import { decodeSearchParams } from "@src/common/utils/decodeSearchParams";
 import { fetchBootcamps } from "@src/api/fetchBootcamps";
 import { fetchRecommendedBootcamps } from "@src/api/fetchRecommendedBootcamps";
 import HorizontalDivider from "@src/components/divider/HorizontalDivider";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | undefined };
+}): Promise<Metadata> {
+  const decodedSearchParams = decodeSearchParams(searchParams);
+
+  return {
+    title: `${decodedSearchParams?.categoryId?.join("·") ?? "데이터·AI"} 부트캠프 리스트`,
+    description: `내가 원하는 ${decodedSearchParams?.categoryId?.join("·") ?? "데이터·AI"} 부트캠프를 검색해 보세요.`,
+    keywords: ["부트캠프", "데이터·AI", ...(decodedSearchParams?.tagIds ?? [])],
+    openGraph: {
+      images: ["/og-images/default.png"],
+    },
+  };
+}
 
 export default async function Bootcamps({ searchParams }: { searchParams: { [key: string]: string | undefined } }) {
   const filters = await fetchBootcampFilters();

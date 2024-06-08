@@ -1,0 +1,55 @@
+@import "../colors";
+@import "./carousel-button";
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26.25px;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  gap: 0px;
+  border: 0px 0px 1px 0px;
+  opacity: 0px;
+  border-bottom: 1px solid $grey-100;
+  margin-bottom: 20px;
+}
+
+.nav_selected {
+  padding: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20.29px;
+  color: $pink-600;
+  border-bottom: 1px solid $pink-600;
+  cursor: pointer;
+}
+
+.nav_non_selected {
+  padding: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20.29px;
+  color: $grey-400;
+  cursor: pointer;
+}
+
+.more {
+  display: block;
+  margin: 32px auto 0;
+  height: 44px;
+  padding: 8px 18px 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  color: $pink-600;
+  background-color: $white;
+  border: 1px solid $grey-100;
+  border-radius: 7px;
+  cursor: pointer;
+}

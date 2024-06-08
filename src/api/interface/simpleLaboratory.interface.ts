@@ -26,4 +26,5 @@ export interface SimpleUniversity {
   id: string;
   name: string;
   logoUrl: string;
+  thumbnailUrl: string;
 }
